@@ -1,0 +1,9 @@
+URL: https://github.com/tovagiventer/DI170/blob/main/DI170/Week2/Day2/day2Submissions/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- In Exercise 6, the `make_great` function should modify the original list in place or return a new list, and then the modified list should be passed to `show_magicians`. currently it does not modify the original list, therefore there is a slight deviation from the problem statement.
+Brief justification:
+- correctness: The code accurately addresses the problems described in the chapter content, implementing functions with parameters, default values, random numbers, and conditional statements. There is a slight deviation in exercise 6 though. The code is functional and produces the expected outputs for each exercise, satisfying all requirements.
+- readability: The code is well-formatted and easy to read, with comments explaining each step of the process. Variable names are descriptive, and the code is organized into functions, making it easy to understand.
+- performance: The code is efficient and performs well, with no unnecessary operations or loops. The functions are optimized for the tasks they perform, and the code runs quickly and smoothly.
+- security: There are no security concerns with this code, as it does not handle any user input or sensitive data.
+
