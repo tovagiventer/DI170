@@ -1,0 +1,12 @@
+URL: https://github.com/tovagiventer/DI170/blob/main/DI170/Week2/Day1/Day1Submissions/DailyChallenge/day3DailyChallenge.py
+suggestions for improvement:
+- In Challenge 1, there's a syntax error: `word_dict[char].append#(i)` should be `word_dict[char].append(i)`. Fix this to make the code executable and fully correct.
+- In Challenge 2, the provided `items_purchase` is an empty dictionary.  You need to initialize it with some data to test the functionality.
+- In Challenge 2, the wallet is also an empty string. It should be initialized with a value. For example: `wallet = "$100"`
+- In Challenge 2, while the code handles the data cleaning correctly, it attempts to modify `items_purchase` in place. It is better to create a new dictionary to store the cleaned prices. The challenge mentions that the priority is defined by the position of the item, modifying it will lead to the loss of information (the position of the items)
+Brief justification:
+- correctness: Challenge 1 is mostly correct but contains a syntax error that prevents execution. Once corrected, it fulfills the requirements.  Challenge 2 is functionally correct, but doesn't work without sample data.  Since the program does not output the correct results due to it trying to iterate over empty values, it only gets partial credit. Both align with the chapter content on dictionaries, loops, and conditionals.
+- readability: The code is reasonably readable with descriptive variable names and comments explaining the logic.  However, adding more comments, especially in Challenge 2, to explain the purpose of each step would improve readability.
+- performance: The code has reasonable performance for the scale of the problem. Using `enumerate` in Challenge 1 is efficient. The cleaning and filtering in Challenge 2 are also reasonably efficient.
+- security: The code doesn't have any obvious security vulnerabilities. User input in Challenge 1 is not directly used in a way that could cause harm. Challenge 2 does not take any user input.
+
