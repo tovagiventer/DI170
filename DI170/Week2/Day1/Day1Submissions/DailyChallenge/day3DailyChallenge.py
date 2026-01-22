@@ -11,7 +11,7 @@ user_word = input('Enter a word: ')
 word_dict = {}
 for i, char in enumerate(user_word):
     if char in word_dict:
-        word_dict[char].append#(i)
+        word_dict[char].append(i)
     else:
         word_dict[char] = [i]
 print(word_dict)
@@ -27,14 +27,21 @@ print(word_dict)
 #if basket = null, print 'Nothing'; else print[sorted(basket)]
 
 
+items_purchase = {"Water": "$1", "Bread": "$3", "TV": "$1,000", "Fertilizer": "$20"}
+wallet = "$300"
+
+# items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
+# wallet = "$100"
+
 # items_purchase = {"Phone": "$999", "Speakers": "$300", "Laptop": "$5,000", "PC": "$1200"}
 # wallet = "$1"
+
 # for each k-v pair, look at value 
 # clean value & convert to integer
 # reassociate cleaned value with the same key in the dictionary
 
-items_purchase = {}
-wallet = ('')
+# items_purchase = {}
+# wallet = ('')
 for key, value in items_purchase.items():
     no_sign = value.replace('$', '')
     no_comma = no_sign.replace(',', '')

@@ -23,7 +23,7 @@
 # # Hint: Tuples are immutable, meaning they cannot be changed after creation. Think about why you can’t add more integers to a tuple.
 
 # tup = (1, 3, 7, 9)
-# #tup.add(5)
+# # tup.add(5)
 # print(tup)
 
 
@@ -54,15 +54,27 @@
 # # Avoid hard-coding each number manually.
 # # Think: Can you generate this sequence using a loop or another method?
 
+# num = 1.5
 # halves = []
-# halves = 1.5
-# while halves <= 5:
-#     print(halves)
-#     halves += 0.5
+# while num <= 5:
+#     halves.append(num)
+#     num += 0.5
+# print(halves)
 
-# # Exercise 5: For Loop
-# # Write a for loop to print all numbers from 1 to 20, inclusive.
-# # Write another for loop that prints every number from 1 to 20 where the index is even.
+# # num = 1.5
+# # l = []
+# # while num <= 5:
+# #     l.append(num)
+# #     num += 0.5
+# # print(l)
+
+# # halves = list(range(1.5, 5.5, 0.5))
+# # print (halves)
+
+
+# Exercise 5: For Loop
+# Write a for loop to print all numbers from 1 to 20, inclusive.
+# Write another for loop that prints every number from 1 to 20 where the index is even.
 
 # for num in range(1, 21):
 #     print(num)
@@ -78,17 +90,26 @@
 # # if the input is incorrect, keep asking for the correct input until it is correct
 # # if the input is correct print “thank you” and break the loop
 
-# isdigit = True
 # while True:
 #     name = input('Enter your name. ')
-#     # len(name) >= 3
-#     if len(name) >= 3 and isdigit == False:
+
+#     found_digit = False 
+#     for char in name:
+#         if char.isdigit():
+#             found_digit = True
+#             break
+        
+#     if len(name) >= 3 and not found_digit:
 #         break
-#     else:
-#         print('Please enter a correct name. ')
-#         # name = input('Enter your name. ')
+    
+#     print('Please enter a correct name. ')
 
 # print('Thank you. ')
+
+## name = input('Enter your name. ')
+## for ch in name:
+##     print(ch, ch.isdigit())
+
 
 # # Exercise 7: Favorite Fruits
 # # Ask the user to input their favorite fruits (they can input several fruits, separated by spaces).
@@ -116,15 +137,17 @@
 # # After exiting the loop, print all the toppings and the total cost of the pizza.
 # # The base price is $10, and each topping adds $2.50.
 
-while True: 
-    toppings = input("Please add a pizza topping, or enter 'quit' when you are finished. ")
-    if toppings == 'quit':
-        break
-    else:
-        print('Adding (topping) to your pizza. ')
+# topping = []
+# while True: 
+#     toppings = input("Please add a pizza topping, or enter 'quit' when you are finished. ") 
+#     if toppings == 'quit':
+#         break
+#     else:
+#         topping.append(toppings)
+#         print(f'Adding {topping[-1]} to your pizza. ')
 
-print(toppings)
-print(f'Your total is ${2.5*len(toppings) + 10}')
+# print(topping)
+# print(f'Your total is ${2.5*len(topping) + 10}')
 
 
 # # Exercise 9: Cinemax Tickets
@@ -135,3 +158,33 @@ print(f'Your total is ${2.5*len(toppings) + 10}')
 # # $15 for anyone over 12.
 # # Print the total ticket cost.
 
+
+# ticket_under3 = 0
+# ticket_3to12 = 0
+# ticket_over12 = 0
+
+# while True: 
+#     ticket = input("Please enter the age of each person buying a movie ticket, one at a time, or enter 'quit' when you are finished.")
+#     if ticket == 'quit':
+#         break
+#     elif int(ticket) < 3:
+#         ticket_under3 +=1
+#     elif int(ticket) <= 12:
+#         ticket_3to12 +=1
+#     else:
+#         ticket_over12 +=1
+
+# print(f'Your total ticket cost is ${10*ticket_3to12 + 15*ticket_over12}')
+
+total_cost = 0
+while True:
+    ticket = input("Please enter the age of each person buying a movie ticket, one at a time, or enter 'quit' when you are finished.")
+    if ticket == 'quit':
+        break
+    ticket_age = int(ticket)
+    if ticket_age > 3 and ticket_age <= 12:
+        total_cost += 10
+    elif ticket_age > 12:
+        total_cost += 15
+
+print(f'Your total ticket cost is ${total_cost}')
