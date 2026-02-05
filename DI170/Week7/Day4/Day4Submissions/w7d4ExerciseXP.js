@@ -75,15 +75,15 @@ for (let i=0; i<people.length; i++) {
 const colors = ["orange", "blue", "purple", "green", "pink"]
 // Loop through the array and as you loop console.log a string like so: “My #1 choice is blue”, “My #2 choice is red” etc… .
 
-for (let i=0; i<people.length; i++) {
-    console.log(`My #${i+1} choice is ${people[i]}.`)
+for (let i=0; i<colors.length; i++) {
+    console.log(`My #${i+1} choice is ${colors[i]}.`)
 }
 // Bonus: Change it to console.log “My 1st choice”, “My 2nd choice”, “My 3rd choice”, picking the correct suffix for each number.
 // Hint : create an array of suffixes to do the Bonus
 
 let suffix = ["st", "nd", "rd", "th", "th"]
-for (let i=0; i<people.length; i++) {
-    console.log(`My ${i+1}${suffix[i]} choice is ${people[i]}.`)
+for (let i=0; i<colors.length; i++) {
+    console.log(`My ${i+1}${suffix[i]} choice is ${colors[i]}.`)
 }
 
 
@@ -95,11 +95,10 @@ for (let i=0; i<people.length; i++) {
 // While the number is smaller than 10 continue asking the user for a new number.
 // Tip : Which while loop is more relevant for this situation?
 
-let userNum = prompt("Pick a number. ");
+let userNum = parseInt(prompt("Pick a number. "));
 console.log(typeof(userNum))
 while (userNum < 10) {
-    userNum++;
-    prompt("Pick a number. ")
+    userNum = parseInt(prompt("Pick a different number. "))
 }
 
 
@@ -178,9 +177,12 @@ const details = {
 }
 // Given the object above and using a for loop, console.log “my name is Rudolf the reindeer”
 
+let redNose = ""
 for (let [key, value] of Object.entries(details)) {
-    console.log(`${key} ${value}`)
+    let currentDetail = key + " " + value + " "
+    redNose += currentDetail
 }
+console.log(redNose)
 
 
 // Exercise 7 : Secret Group
@@ -191,7 +193,9 @@ const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 // Console.log the name of their secret society. The output should be “ABJKPS”
 
 names.sort()
+let secretSoc = ""
 for (let name of names) {
-    secretSoc = name[0]
-    console.log(secretSoc)
+    let firstInitial = name[0]
+    secretSoc += firstInitial
 }
+console.log(secretSoc)
