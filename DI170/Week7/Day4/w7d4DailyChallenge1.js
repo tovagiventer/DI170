@@ -27,8 +27,8 @@ let wordBad = sentence.indexOf("bad")
 //   --> the result is : 'This dinner is bad !'
 
 if (wordNot < wordBad) {
-    let notBad = sentence.substring(wordNot, wordBad + 4)
-    let goodString = sentence.replace(notBad, "good ")
+    let notBad = sentence.substring(wordNot, wordBad + 3)
+    let goodString = sentence.replace(notBad, "good")
     console.log(goodString)
 } else {
     console.log(sentence)
