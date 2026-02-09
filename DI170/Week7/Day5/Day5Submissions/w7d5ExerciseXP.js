@@ -7,9 +7,11 @@
 
 // At the end, console.log the sum of all numbers that are divisible by 23.
 
+divBy23 = []
+sum = ""
 function displayNumbersDivisible(){
     for (let i = 0; i <= 500; i++){
-        divBy23 = [i(i%23 == 0)]
+        divBy23 = (i%23 == 0)
         console.log(divBy23)
         sum += divBy23[i]
         console.log(sum)

@@ -9,11 +9,10 @@
 // * * * * *
 // * * * * * *
 
-let star = []
+let star = ""
 for (let i = 0; i < 6; i++) {
-    star.push("*")
-    let aster = star.join(' ')
-    console.log(aster)
+    star += "* "
+    console.log(star)
 }
 
 let strix = ""
@@ -23,3 +22,10 @@ for (let i = 0; i < 6; i++)  {
     strix += "* "
     console.log(strix)
 }
+
+// let star = []
+// for (let i = 0; i < 6; i++) {
+//     star.push("*")
+//     let aster = star.join(' ')
+//     console.log(aster)
+// }
